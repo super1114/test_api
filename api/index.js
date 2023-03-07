@@ -10,6 +10,11 @@ app.use(bodyparser.json());
 
 //Router
 
+app.get('api', (req, res) => {
+    res.send("HELLO WORLD");
+});
+
 app.use('api/nft', nftRouterHandler);
+
 
 module.exports = app;
