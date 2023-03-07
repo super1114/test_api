@@ -14,7 +14,7 @@ app.get('/api/nft', (req, res) => {
     res.send("True Color");
 });
 
-app.get('/api', (req, res) => {
+app.get('/api/', (req, res) => {
     res.send("HELLO WORLD");
 });
 
