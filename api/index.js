@@ -30,8 +30,11 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
-//Rouer
+//Router
 app.use('api/nft', nftRouterHandler);
+app.get('api', (req, res) => {
+    res.send("Hello Truecolor");
+});
 
 // app.listen(PORT, () => {
 //     console.log(`Server is running at ${PORT}`);
