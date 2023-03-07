@@ -2,7 +2,7 @@ const express = require("express");
 const NFTModel = require('../model/model.js')
 const router = express.Router();
 
-router.post('/imgUpload', async (req, res) => {
+router.post('/imgUpload', (req, res) => {
   if (!req.files) {
     return res.sendStatus(404);
   } else {
@@ -27,7 +27,7 @@ router.post('/imgUpload', async (req, res) => {
   }
 });
 
-router.post('/creat', async (req, res) => {
+router.post('/create', (req, res) => {
   //nftProperties for demo
   // let demo_nftProperties = new Array();
   // demo_nftProperties.push = { color: "red"};
