@@ -16,8 +16,8 @@ app.get('/api', (req, res) => {
 
 app.use('/api/nft', nftRouterHandler);
 
-app.listen(PORT, () => {
-    console.log(`Server is running at ${PORT}`);
-})
+// app.listen(PORT, () => {
+//     console.log(`Server is running at ${PORT}`);
+// })
 
 module.exports = app;
