@@ -11,7 +11,7 @@ const CLOUDURL = "mongodb+srv://james:foreverwithhys@xrpl-cluster.j3xqx9d.mongod
 const LOCALURL = "mongodb://127.0.0.1:27017/nftDB";
 
 //Connect MongoDB
-mongoose.connect(CLOUDURL);
+mongoose.connect(process.env.MONGODB_URI);
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", function () {
