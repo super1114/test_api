@@ -1,5 +1,5 @@
 const app = require("express")();
-const createRouter = require("../routes/createRouter");
+const createRouter = require("./routes/createRouter");
 
 app.use("/api/", createRouter);
 
