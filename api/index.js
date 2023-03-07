@@ -11,10 +11,14 @@ app.use(bodyparser.json());
 //Router
 
 app.post('/api/nft/create/', (req, res) => {
+    res.send("True Color");
+});
+
+app.get('/api/nft/create/', (req, res) => {
     res.send("HELLO WORLD");
 });
 
-app.use('/api/nft/', nftRouterHandler);
+// app.use('/api/nft/', nftRouterHandler);
 
 // app.listen(PORT, () => {
 //     console.log(`Server is running at ${PORT}`);
