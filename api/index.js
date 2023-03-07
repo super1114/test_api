@@ -10,7 +10,7 @@ app.use(bodyparser.json());
 
 //Router
 
-app.get('/api/', (req, res) => {
+app.post('/api/nft/create/', (req, res) => {
     res.send("HELLO WORLD");
 });
 
