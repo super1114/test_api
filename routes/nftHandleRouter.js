@@ -1,5 +1,5 @@
 const express = require("express");
-const NFTModel = require('../model/model.js')
+// const NFTModel = require('../model/model.js')
 const router = express.Router();
 
 router.get("/", (req, res) => {

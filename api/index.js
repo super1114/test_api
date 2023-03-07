@@ -1,7 +1,7 @@
 const app = require("express")();
 const bodyparser = require('body-parser');
 
-const nftRouterHandler = require('../routes/nftHandleRouter');
+// const nftRouterHandler = require('../routes/nftHandleRouter');
 const PORT = 8000;
 //Middleware
 
