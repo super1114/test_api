@@ -31,8 +31,8 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 //Router
-app.use('api/nft', nftRouterHandler);
-app.get('api', (req, res) => {
+app.use('/api/nft/', nftRouterHandler);
+app.get('/api', (req, res) => {
     res.send("Hello Truecolor");
 });
 
