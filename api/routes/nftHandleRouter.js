@@ -2,6 +2,10 @@ const express = require("express");
 const NFTModel = require('../model/model.js')
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.send("nft router start");
+})
+
 router.post('/imgUpload', (req, res) => {
   if (!req.files) {
     return res.sendStatus(404);
