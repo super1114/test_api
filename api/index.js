@@ -1,7 +1,15 @@
 const app = require("express")();
+const bodyparser = require('body-parser');
 
-app.get("/api", (req, res) => {
-    res.send("Hello Truecolor")
-});
+const nftRouterHandler = require('./routes/nftHandleRouter.js');
+
+//Middleware
+
+app.use(bodyparser.urlencoded({ extended: true }));
+app.use(bodyparser.json());
+
+//Router
+
+app.use('api/nft', nftRouterHandler);
 
 module.exports = app;

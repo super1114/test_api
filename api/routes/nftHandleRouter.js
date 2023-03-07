@@ -29,25 +29,26 @@ router.post('/imgUpload', async (req, res) => {
 
 router.post('/creat', async (req, res) => {
   //nftProperties for demo
-  let demo_nftProperties = new Array();
-  demo_nftProperties.push = { color: "red"};
-  demo_nftProperties.push = { size: "big"};
+  // let demo_nftProperties = new Array();
+  // demo_nftProperties.push = { color: "red"};
+  // demo_nftProperties.push = { size: "big"};
 
-  let newNFT = {
-    nftName: req.body.nftName,
-    nftDescription: req.body.nftDescription,
-    // nftProperties: req.body.nftDescription
-    nftProperties: demo_nftProperties
-  };
+  // let newNFT = {
+  //   nftName: req.body.nftName,
+  //   nftDescription: req.body.nftDescription,
+  //   // nftProperties: req.body.nftDescription
+  //   nftProperties: demo_nftProperties
+  // };
 
-  const nft = new NFTModel(newNFT);
+  // const nft = new NFTModel(newNFT);
 
-  try {
-    await nft.save();
-    res.send(nft);
-  } catch (error) {
-    res.status(500).send(error);
-  }
+  // try {
+  //   await nft.save();
+  //   res.send(nft);
+  // } catch (error) {
+  //   res.status(500).send(error);
+  // }
+  res.send("True Color");
 });
 
 module.exports = router;
