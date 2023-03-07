@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const bodyparser = require('body-parser');
 const cors = require('cors')
 const fileUpload = require('express-fileUpload')
-const nftRouterHandler = require('./routes/nftHandleRouter.js');
+const nftRouterHandler = require('../routes/nftHandleRouter.js');
 
 const PORT = 8000;
 const CLOUDURL = "mongodb+srv://james:foreverwithhys@xrpl-cluster.j3xqx9d.mongodb.net/nftDB";

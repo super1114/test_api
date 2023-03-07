@@ -6,7 +6,7 @@ router.get("/", (req, res) => {
   res.send("nft router start");
 })
 
-router.post('/imgUpload', (req, res) => {
+router.post('/imgUpload', async (req, res) => {
   if (!req.files) {
     return res.sendStatus(404);
   } else {
@@ -31,28 +31,27 @@ router.post('/imgUpload', (req, res) => {
   }
 });
 
-router.post('/create', (req, res) => {
+router.post('/create', async (req, res) => {
   //nftProperties for demo
-  // let demo_nftProperties = new Array();
-  // demo_nftProperties.push = { color: "red"};
-  // demo_nftProperties.push = { size: "big"};
+  let demo_nftProperties = new Array();
+  demo_nftProperties.push = { color: "red" };
+  demo_nftProperties.push = { size: "big" };
 
-  // let newNFT = {
-  //   nftName: req.body.nftName,
-  //   nftDescription: req.body.nftDescription,
-  //   // nftProperties: req.body.nftDescription
-  //   nftProperties: demo_nftProperties
-  // };
+  let newNFT = {
+    nftName: req.body.nftName,
+    nftDescription: req.body.nftDescription,
+    // nftProperties: req.body.nftDescription
+    nftProperties: demo_nftProperties
+  };
 
-  // const nft = new NFTModel(newNFT);
+  const nft = new NFTModel(newNFT);
 
-  // try {
-  //   await nft.save();
-  //   res.send(nft);
-  // } catch (error) {
-  //   res.status(500).send(error);
-  // }
-  res.send("True Color");
+  try {
+    await nft.save();
+    res.send(nft);
+  } catch (error) {
+    res.status(500).send(error);
+  }
 });
 
 module.exports = router;
